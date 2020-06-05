@@ -1,3 +1,4 @@
+# import statement
 from math import ceil
 
 credit_principal = int(input('Enter the credit principal:\n'))
@@ -23,3 +24,5 @@ elif option == 'p':
     else:
         print('Your monthly payment = {} with last month payment = {}'.format(monthly_payment,
                                                                               last_payment))
+
+ 
