@@ -105,6 +105,23 @@ files:
     if __name__ == '__main__':
         CreditCalcTest('creditcalc.creditcalc').run_tests()
   learner_created: false
+- name: creditcalc/creditcalc.py
+  visible: true
+  text: "from math import ceil\n\ncredit_principal = int(input('Enter the credit principal:\\\
+    n'))\noption = input(\"\"\"\nWhat do you want to calculate? \ntype \"m\" - for\
+    \ count of months, \ntype \"p\" - for monthly payment:\n\"\"\")\n\nif option ==\
+    \ 'm':\n    monthly_payment = int(input('Enter monthly payment:\\n'))\n    months_required\
+    \ = int(round(credit_principal/monthly_payment))\n    if months_required == 1:\n\
+    \        print('It takes {} month to repay the credit'.format(months_required))\n\
+    \    else:\n        print('It takes {} months to repay the credit'.format(months_required))\n\
+    elif option == 'p':\n    months_required = int(input('Enter count of months:\\\
+    n'))\n    monthly_payment = int(ceil(credit_principal / months_required))\n  \
+    \  last_payment = int(credit_principal - (months_required - 1) * monthly_payment)\n\
+    \    if last_payment == monthly_payment:\n        print('Your monthly payment\
+    \ = {}'.format(last_payment))\n    else:\n        print('Your monthly payment\
+    \ = {} with last month payment = {}'.format(monthly_payment,\n               \
+    \                                                               last_payment))\n"
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/90/stages/502/implement
 status: Unchecked
 record: -1
