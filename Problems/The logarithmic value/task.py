@@ -1,3 +1,4 @@
+
 from math import log
 
 x, y = map(int, [input(), input()])
